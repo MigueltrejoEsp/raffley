@@ -8,7 +8,6 @@ defmodule RaffleyWeb.RuleController do
     rules = Rules.list_rules()
 
     render(conn, :index, emojis: emojis, rules: rules)
-
   end
 
   def show(conn, %{"id" => id}) do

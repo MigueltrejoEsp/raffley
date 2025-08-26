@@ -1,5 +1,4 @@
 defmodule Raffley.Rules do
-
   def list_rules do
     [
       %{

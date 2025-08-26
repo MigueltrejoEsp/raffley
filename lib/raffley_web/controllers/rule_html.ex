@@ -4,13 +4,11 @@ defmodule RaffleyWeb.RuleHTML do
   embed_templates "rule_html/*"
 
   def show(assigns) do
-
-  ~H"""
-  <div class="rules">
-    <h1><%= @greeting %>! Don't forget...</h1>
-    <p> <%= @rule.text %> </p>
-  </div>
-  """
+    ~H"""
+    <div class="rules">
+      <h1>{@greeting}! Don't forget...</h1>
+      <p>{@rule.text}</p>
+    </div>
+    """
   end
-
 end
