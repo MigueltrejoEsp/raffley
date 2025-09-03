@@ -24,8 +24,8 @@ defmodule Raffley.Raffles do
       %Raffley.Raffle{
         id: 3,
         prize: "Vintage comic book",
-        ticket_price: 3,
-        status: :close,
+        ticket_price: 1,
+        status: :closed,
         image_path: "/images/comic-book.jpg",
         description: "A rare collectible"
       }
