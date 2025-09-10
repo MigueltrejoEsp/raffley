@@ -8,6 +8,7 @@ defmodule RaffleyWeb.EstimatorLive do
 
     socket = assign(socket, tickets: 0, price: 3)
 
+    # {:ok, socket, layout: {RaffleyWeb.Layouts, :simple}}
     {:ok, socket}
   end
 
