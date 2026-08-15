@@ -5,7 +5,9 @@
   </p>
   <ol>
     <%= for rule <- @rules  do %>
-      <li>{rule.text}</li>
+      <a href={~p"/rules/#{rule.id}"}>
+        <li>{rule.text}</li>
+      </a>
     <% end %>
   </ol>
 </div>
