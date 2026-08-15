@@ -28,6 +28,7 @@ defmodule RaffleyWeb.Router do
     get "/", PageController, :home
     get "/rules", RuleController, :index
     get "/rules/:id", RuleController, :show
+    live "/estimator", EstimatorLive
   end
 
   # Other scopes may use custom stacks.
