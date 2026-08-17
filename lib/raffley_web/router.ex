@@ -29,6 +29,7 @@ defmodule RaffleyWeb.Router do
     get "/rules", RuleController, :index
     get "/rules/:id", RuleController, :show
     live "/estimator", EstimatorLive
+    live "/raffles", RaffleLive.Index
   end
 
   # Other scopes may use custom stacks.
