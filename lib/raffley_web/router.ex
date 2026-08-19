@@ -25,9 +25,11 @@ defmodule RaffleyWeb.Router do
   scope "/", RaffleyWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
     get "/rules", RuleController, :index
     get "/rules/:id", RuleController, :show
+
+    live "/", RaffleLive.Index
     live "/estimator", EstimatorLive
     live "/raffles", RaffleLive.Index
   end
