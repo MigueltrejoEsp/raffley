@@ -2,7 +2,7 @@ defmodule RaffleyWeb.RaffleLive.Index do
   use RaffleyWeb, :live_view
 
   alias Raffley.Raffles
-  alias RaffleyWeb.CustomComponents
+  import RaffleyWeb.CustomComponents
 
   def mount(_params, _session, socket) do
     socket = assign(socket, :raffles, Raffles.list_raffles())
@@ -12,6 +12,15 @@ defmodule RaffleyWeb.RaffleLive.Index do
   def render(assigns) do
     ~H"""
     <div class="raffle-index">
+      <.banner>
+        <.icon name="hero-sparkles-solid" /> Mystery Raffle Coming Soon!
+        <:details :let={emoji}>
+          To be revealed tomorrow... {emoji}
+        </:details>
+        <:details>
+          Any guess?
+        </:details>
+      </.banner>
       <div class="raffles">
         <.raffle_card :for={raffle <- @raffles} raffle={raffle} />
       </div>
@@ -32,7 +41,7 @@ defmodule RaffleyWeb.RaffleLive.Index do
         <div class="price">
           ${@raffle.ticket_price} / ticket
         </div>
-        <CustomComponents.badge status={@raffle.status} />
+        <.badge status={@raffle.status} />
       </div>
     </div>
     """
