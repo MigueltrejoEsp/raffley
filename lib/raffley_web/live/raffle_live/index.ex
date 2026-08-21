@@ -28,7 +28,7 @@ defmodule RaffleyWeb.RaffleLive.Index do
     """
   end
 
-  attr :raffle, Raffley.Raffle, required: true
+  attr :raffle, Raffley.Raffles.Raffle, required: true
 
   def raffle_card(assigns) do
     ~H"""
