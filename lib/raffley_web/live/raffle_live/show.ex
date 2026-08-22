@@ -7,7 +7,7 @@ defmodule RaffleyWeb.RaffleLive.Show do
   end
 
   def handle_params(%{"id" => id}, _uri, socket) do
-    raffle = Raffley.Raffles.get_raffle(id)
+    raffle = Raffley.Raffles.get_raffle!(id)
 
     socket =
       socket
